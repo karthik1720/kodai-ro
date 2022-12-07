@@ -1,0 +1,49 @@
+.moveToTop {
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  opacity: 0;
+  transition: all 0.5s;
+  img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+}
+
+.moveToTop .Tooltip {
+  visibility: hidden;
+  opacity: 0;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.moveToTop .Tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.moveToTop:hover .Tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.showIconAnimation {
+  opacity: 1;
+}
