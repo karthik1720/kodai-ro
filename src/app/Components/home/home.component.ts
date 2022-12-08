@@ -8,6 +8,7 @@ import { Component, OnInit } from "@angular/core";
 export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.changeImg();
+
     window.addEventListener("scroll", (e) => {
       this.onScroll();
     });
@@ -25,12 +26,11 @@ export class HomeComponent implements OnInit {
   }
 
   onScroll() {
-    if (window.scrollY < this.posCurrent) {
+    console.log(window.scrollY);
+    if (window.scrollY < this.posCurrent && window.scrollY > 768) {
       this.showIcon = true;
-      this.notShowIcon = false;
     } else {
       this.showIcon = false;
-      this.notShowIcon = true;
     }
     this.posCurrent = window.scrollY;
   }
