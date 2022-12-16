@@ -7,7 +7,7 @@
 .ENV
 .env
 .angular
-
+/dist
 # testing
 /coverage
 
