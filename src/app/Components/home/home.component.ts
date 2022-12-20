@@ -1,17 +1,22 @@
 import { Component, OnInit } from "@angular/core";
-
+import { HeaderComponent } from "../header/header.component";
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
+  constructor(private header: HeaderComponent) {
+    this.showModal = header.show;
+  }
   ngOnInit(): void {
     this.changeImg();
     window.addEventListener("scroll", (e) => {
       this.onScroll();
+      console.log(this.showModal);
     });
   }
+  showModal: boolean = false;
   posCurrent: number = 0;
   name: string = "karthik";
   images: any[] = ["banner1.jpg", "banner2.jpg", "banner3.jpeg"];

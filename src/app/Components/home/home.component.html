@@ -118,4 +118,12 @@
     <span class="Tooltip">Move to top</span>
     <img src="assets/up-arrow-blue.png" alt="" (click)="scrollToTop()" />
   </div>
+
+  <div
+    class="popup"
+    [ngStyle]="showModal ? { display: 'block' } : { display: 'none' }"
+  >
+    <!-- <div class="backgroundBlur"></div> -->
+    <app-bookademo></app-bookademo>
+  </div>
 </div>

@@ -1,0 +1,53 @@
+.formContainer {
+  border: 2px solid gray;
+  display: flex;
+  width: fit-content;
+  background-color: white;
+  width: 500px;
+  .formWrapper {
+    padding: 50px 30px 20px 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      input {
+        font-size: 13px;
+        padding: 10px 3px;
+        width: 100%;
+        height: 35px;
+      }
+    }
+    .buttons {
+      padding-top: 10px;
+      border-top: 1px solid gray;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      gap: 10px;
+      button {
+        border: none;
+        color: white;
+        border-radius: 50px;
+        padding: 5px 15px;
+        font-size: 14px;
+        background-color: gray;
+      }
+      button.submit {
+        background-color: purple;
+      }
+    }
+  }
+  .img {
+    object-fit: fill;
+    flex: 1;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

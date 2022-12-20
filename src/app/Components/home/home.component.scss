@@ -112,3 +112,26 @@
 //     gap: 10px;
 //   }
 // }
+
+// .backgroundBlur {
+//   position: fixed;
+//   top: 0;
+//   z-index: 1000;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: rgba(0, 0, 0, 0.5);
+// }
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}

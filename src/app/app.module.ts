@@ -6,12 +6,20 @@ import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./Components/header/header.component";
 import { FooterComponent } from "./Components/footer/footer.component";
 import { HomeComponent } from "./Components/home/home.component";
-import { ProductsComponent } from './Components/products/products.component';
+import { ProductsComponent } from "./Components/products/products.component";
+import { BookademoComponent } from "./Components/bookademo/bookademo.component";
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, ProductsComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    ProductsComponent,
+    BookademoComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  providers: [HeaderComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
