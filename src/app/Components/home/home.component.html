@@ -7,7 +7,7 @@
   <div class="homeWrapper">
     <div class="homeCard">
       <div class="left">
-        <h3>Products</h3>
+        <h3>{{ showData }}</h3>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam aut
           eum excepturi doloremque natus adipisci in rem laudantium nisi asd,
@@ -119,11 +119,10 @@
     <img src="assets/up-arrow-blue.png" alt="" (click)="scrollToTop()" />
   </div>
 
-  <div
-    class="popup"
-    [ngStyle]="showModal ? { display: 'block' } : { display: 'none' }"
-  >
+  <div class="popup" *ngIf="showData">
     <!-- <div class="backgroundBlur"></div> -->
-    <app-bookademo></app-bookademo>
+    <app-bookademo [showMFunc]="showMFunc"></app-bookademo>
   </div>
 </div>
+
+<!-- [ngStyle]="showModal ? { display: 'block' } : { display: 'none' }" -->

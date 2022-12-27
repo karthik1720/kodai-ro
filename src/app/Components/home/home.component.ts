@@ -1,4 +1,11 @@
-import { Component, OnInit } from "@angular/core";
+import {
+  Component,
+  ContentChild,
+  Input,
+  OnInit,
+  SimpleChanges,
+} from "@angular/core";
+import { DataService } from "src/app/services/data.service";
 import { HeaderComponent } from "../header/header.component";
 @Component({
   selector: "app-home",
@@ -6,17 +13,16 @@ import { HeaderComponent } from "../header/header.component";
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
-  constructor(private header: HeaderComponent) {
-    this.showModal = header.show;
-  }
+  @Input() showData: any;
+  constructor(private data: DataService) {}
+  @Input() showMFunc: any;
   ngOnInit(): void {
     this.changeImg();
     window.addEventListener("scroll", (e) => {
       this.onScroll();
-      console.log(this.showModal);
     });
   }
-  showModal: boolean = false;
+
   posCurrent: number = 0;
   name: string = "karthik";
   images: any[] = ["banner1.jpg", "banner2.jpg", "banner3.jpeg"];
@@ -29,7 +35,7 @@ export class HomeComponent implements OnInit {
   }
 
   onScroll() {
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
     if (window.scrollY > 700) {
       this.showIcon = true;
     } else {

@@ -8,7 +8,7 @@ import { FooterComponent } from "./Components/footer/footer.component";
 import { HomeComponent } from "./Components/home/home.component";
 import { ProductsComponent } from "./Components/products/products.component";
 import { BookademoComponent } from "./Components/bookademo/bookademo.component";
-
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,7 @@ import { BookademoComponent } from "./Components/bookademo/bookademo.component";
     ProductsComponent,
     BookademoComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [HeaderComponent],
   bootstrap: [AppComponent],
 })

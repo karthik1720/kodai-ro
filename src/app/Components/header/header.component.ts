@@ -1,4 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { DataService } from "src/app/services/data.service";
+import { HomeComponent } from "../home/home.component";
 
 @Component({
   selector: "app-header",
@@ -6,9 +8,7 @@ import { Component } from "@angular/core";
   styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent {
-  show: boolean = false;
-  showModal() {
-    this.show = true;
-    console.log(this.show);
-  }
+  @Input() showMFunc: any;
+
+  constructor(private data: DataService) {}
 }
