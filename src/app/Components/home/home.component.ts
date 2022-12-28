@@ -6,7 +6,7 @@ import {
   SimpleChanges,
 } from "@angular/core";
 import { DataService } from "src/app/services/data.service";
-import { HeaderComponent } from "../header/header.component";
+
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
@@ -14,6 +14,7 @@ import { HeaderComponent } from "../header/header.component";
 })
 export class HomeComponent implements OnInit {
   @Input() showData: any;
+
   constructor(private data: DataService) {}
   @Input() showMFunc: any;
   ngOnInit(): void {
@@ -22,7 +23,6 @@ export class HomeComponent implements OnInit {
       this.onScroll();
     });
   }
-
   posCurrent: number = 0;
   name: string = "karthik";
   images: any[] = ["banner1.jpg", "banner2.jpg", "banner3.jpeg"];
@@ -31,7 +31,11 @@ export class HomeComponent implements OnInit {
   notShowIcon: boolean = true;
   newimg: any = this.images[0];
   scrollToTop() {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   }
 
   onScroll() {
