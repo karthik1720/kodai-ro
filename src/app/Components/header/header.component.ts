@@ -11,4 +11,13 @@ export class HeaderComponent {
   @Input() showMFunc: any;
 
   constructor(private data: DataService) {}
+
+  currentActive: string = "home";
+
+  handleActive(event: any) {
+    this.currentActive = event.currentTarget.name;
+  }
+  handleMouseOver(e: any) {
+    console.log(e.currentTarget);
+  }
 }

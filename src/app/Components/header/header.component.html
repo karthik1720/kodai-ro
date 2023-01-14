@@ -7,17 +7,39 @@
   </div>
   <div class="headerSplit"></div>
   <div class="headerSplit">
-    <div class="navButton">
-      <a href="#"><h3 class="options">Home</h3></a>
+    <div
+      class="navButton"
+      [ngClass]="currentActive === 'home' ? 'makeActive' : ''"
+    >
+      <a href="#" (click)="handleActive($event)" name="home"
+        ><h3 class="options">Home</h3></a
+      >
     </div>
-    <div class="navButton">
-      <a href="#products"><h3 class="options">Products</h3></a>
+    <div
+      class="navButton"
+      [ngClass]="currentActive === 'products' ? 'makeActive' : ''"
+    >
+      <a href="#products" (click)="handleActive($event)" name="products"
+        ><h3 class="options">Products</h3></a
+      >
     </div>
-    <div class="navButton">
-      <a href="#"><h3 class="options">About Us</h3></a>
+    <div
+      class="navButton"
+      (mouseover)="handleMouseOver($event)"
+      [ngClass]="currentActive === 'aboutus' ? 'makeActive' : ''"
+    >
+      <a href="#" (click)="handleActive($event)" name="aboutus"
+        ><h3 class="options">About Us</h3></a
+      >
     </div>
-    <div class="navButton" (click)="showMFunc()">
-      <a><h3 class="options">Contact Us</h3></a>
+    <div
+      class="navButton"
+      (click)="showMFunc()"
+      [ngClass]="currentActive === 'contactus' ? 'makeActive' : ''"
+    >
+      <a (click)="handleActive($event)" name="contactus"
+        ><h3 class="options">Contact Us</h3></a
+      >
     </div>
   </div>
 </div>

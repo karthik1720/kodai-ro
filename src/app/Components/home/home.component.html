@@ -56,7 +56,7 @@
         <img src="assets/whatsapp.png" alt="" srcset="" />
       </div>
     </div>
-    <div class="homeCard">
+    <div class="homeCard" #pos>
       <h3>about</h3>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam aut
@@ -72,7 +72,6 @@
     </div>
     <div class="homeCard">
       <h3>about</h3>
-
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam aut
         eum excepturi doloremque natus adipisci in rem laudantium nisi
@@ -118,8 +117,8 @@
         : { transition: 'all 0.5s', bottom: '-100px' }
     "
   >
-    <span class="Tooltip">Move to top</span>
-    <img src="assets/up-arrow-blue.png" alt="" (click)="scrollToTop()" />
+    <!-- <span class="Tooltip">Move to top</span> -->
+    <img src="assets/up-arrow.png" alt="" (click)="scrollToTop()" />
   </div>
 
   <div class="popup" *ngIf="showData">

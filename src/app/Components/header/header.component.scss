@@ -68,6 +68,16 @@ $nav-height: 70px;
       }
     }
 
+    .makeActive {
+      background-color: rgba(88, 168, 255, 1);
+      transition: all 1s;
+
+      border-radius: 10px;
+      a {
+        color: white;
+      }
+    }
+
     .highlight {
       background-color: rgba(88, 168, 255, 1);
 
