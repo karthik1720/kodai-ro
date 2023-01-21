@@ -1,0 +1,29 @@
+<div class="productsContainer">
+  <div class="imgContainer">
+    <img src="assets/banner1.jpg" alt="" />
+  </div>
+  <div class="descContainer">
+    <div class="title">
+      <h3>Ro purifier</h3>
+    </div>
+    <p>
+      simply dummy text of the printing and typesetting industry. Lorem Ipsum
+      has been the industry's standard dummy text ever since the 1500s,
+    </p>
+    <div class="bottom">
+      <div class="price">
+        <h3>$200</h3>
+        <span>$250</span>
+      </div>
+      <button (click)="showDesc()">Learn more...</button>
+    </div>
+  </div>
+  <div class="fullDesc" [ngClass]="showDescription ? 'active' : null">
+    <i class="eva eva-close-outline iButton" (click)="showDesc()"></i>
+    <h5>Water purifier</h5>
+    <p>
+      simply dummy text of the printing and typesetting industry. Lorem Ipsum
+      has been the industry's standard dummy text ever since the 1500s,
+    </p>
+  </div>
+</div>

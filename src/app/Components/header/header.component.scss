@@ -1,0 +1,91 @@
+$nav-height: 70px;
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerContainer {
+  background-color: white;
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $nav-height;
+  // width: 100%;
+  color: black;
+  padding: 0 50px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .headerSplit {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    .brandLogo {
+      display: flex;
+      align-items: center;
+      img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+    .navButton {
+      width: 120px;
+      height: calc($nav-height * 60 / 100);
+
+      border: 0px solid rgba(88, 168, 255, 1);
+      border-radius: 3px;
+      cursor: pointer;
+      a {
+        height: inherit;
+        width: inherit;
+        text-decoration: none;
+        color: black;
+        @include flexCenter;
+        margin: 0;
+        h3 {
+          margin: 0;
+          font-size: 17px;
+          font-weight: 300;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px;
+        }
+      }
+    }
+    .navButton:hover {
+      background-color: rgba(88, 168, 255, 1);
+
+      border-radius: 10px;
+      a {
+        color: white;
+      }
+    }
+
+    .makeActive {
+      background-color: rgba(88, 168, 255, 1);
+      transition: all 1s;
+
+      border-radius: 10px;
+      a {
+        color: white;
+      }
+    }
+
+    .highlight {
+      background-color: rgba(88, 168, 255, 1);
+
+      border-radius: 10px;
+      a {
+        color: white;
+      }
+      //   background-color: white;
+    }
+  }
+}

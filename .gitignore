@@ -6,7 +6,8 @@
 .pnp.js
 .ENV
 .env
-
+.angular
+/dist
 # testing
 /coverage
 

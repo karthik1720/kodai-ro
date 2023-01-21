@@ -1,0 +1,97 @@
+$blue-color: rgb(64, 156, 255);
+$gray-color-line: rgb(231, 231, 231);
+.formContainer {
+  display: flex;
+
+  border-radius: 10px;
+  overflow: hidden;
+  width: fit-content;
+  background-color: white;
+  width: 700px;
+  animation: formzoom 300ms ease-in-out forwards;
+  .formWrapper {
+    padding: 0 30px 0 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    .inputs {
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      h3 {
+        align-self: center;
+        justify-self: center;
+        color: $blue-color;
+      }
+      .input {
+        font-size: 13px;
+        padding: 10px 7px;
+        // width: 100%;
+        height: 30px;
+        border-radius: 7px;
+        align-items: center;
+        display: flex;
+        border: 1px solid $gray-color-line;
+        gap: 10px;
+        i {
+          font-size: 20px;
+          color: $blue-color;
+        }
+        input {
+          border: 0;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          outline: none;
+        }
+      }
+    }
+    .buttons {
+      padding: 20px 0;
+      border-top: 1px solid $gray-color-line;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      gap: 10px;
+      button {
+        color: $blue-color;
+        border-radius: 50px;
+        padding: 5px 15px;
+        font-size: 14px;
+        background-color: white;
+        border: 1px solid $blue-color;
+        cursor: pointer;
+      }
+      button.submit {
+        color: white;
+
+        background-color: $blue-color;
+      }
+    }
+  }
+  .img {
+    object-fit: fill;
+    flex: 1;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@keyframes formzoom {
+  0% {
+    transform: scale(0, 0);
+  }
+
+  80% {
+    transform: scale(1.1, 1.1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
