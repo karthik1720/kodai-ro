@@ -30,8 +30,21 @@ $nav-height: 70px;
       display: flex;
       align-items: center;
       img {
-        height: 50px;
-        width: 50px;
+        height: 55px;
+        width: 45px;
+        padding-right: 35px;
+      }
+      .brandTitle{
+        //background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%); // Gradient Background
+        font-weight: 700;
+        font-size: 26px;
+        //font-size: larger;
+        letter-spacing: 1.5px;
+      }
+      // For text selection color
+      .brandTitle::selection {
+        background-color: rgba(88, 168, 255, 1);
+        color: white;
       }
     }
     .navButton {
